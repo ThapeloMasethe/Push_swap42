@@ -6,7 +6,7 @@
 /*   By: tmasethe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 14:35:06 by tmasethe          #+#    #+#             */
-/*   Updated: 2018/09/11 09:45:52 by tmasethe         ###   ########.fr       */
+/*   Updated: 2018/09/12 11:40:12 by tmasethe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,14 @@ int		main(int argc, char **argv)
 	t_stack	*b;
 	t_stack	stack;
 
-	if (!check_numbers(&stack, argc, argv) || (argc == 1))
-	//		|| !check_duplicates(argc, argv))
+	if (!check_numbers(&stack, argc, argv) || (argc == 1)
+			|| !check_duplicates(argc, argv))
 		return (0);
 	a = create_stack(stack.size);
 	b = create_stack(stack.size);
 	if (get_numbers(a, argc, argv))
 		a->size = stack.size;
 	main_sort(a, b);
-	//sorts_stack(a, b);
 	free_leaks(a, b);
 	return (0);
 }

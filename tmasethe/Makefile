@@ -6,7 +6,7 @@
 #    By: tmasethe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/26 11:56:18 by tmasethe          #+#    #+#              #
-#    Updated: 2018/09/11 12:02:15 by tmasethe         ###   ########.fr        #
+#    Updated: 2018/09/12 12:22:14 by tmasethe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ NAME_PUSH_SWAP	=	push_swap
 
 FILES_CHECKER	=	swap.c\
 					push.c\
-					handle.c\
 					check.c\
+					handle.c\
 					checker.c\
 					rotate.c\
 					reverse_rotate.c\

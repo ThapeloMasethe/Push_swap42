@@ -6,7 +6,7 @@
 /*   By: tmasethe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 11:48:31 by tmasethe          #+#    #+#             */
-/*   Updated: 2018/09/11 12:01:41 by tmasethe         ###   ########.fr       */
+/*   Updated: 2018/09/12 12:17:57 by tmasethe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,29 +37,15 @@ void			rrb(t_stack *b);
 void			rrr(t_stack *a, t_stack *b);
 void			pa(t_stack *a, t_stack *b);
 void			pb(t_stack *a, t_stack *b);
-void			push_stack(t_stack *stack, int element);
-void			push_a(t_stack *a, t_stack *b);
-void			push_b(t_stack *a, t_stack *b);
-void			rotate_stack(int *stack, int size);
-void			reverse_rotate_stack(int *stack, int size);
-void			rotate_both(int *a, int size_a, int *b, int size_b);
-void			reverse_rotate_both(int *a, int size_a, int *b, int size_b);
 
-void			pop_stack(t_stack *stack);
-int				top_stack(t_stack *stack);
-
-int				is_sorted(t_stack *stack);
 t_stack			*create_stack(int size);
 void			sorts_stack(t_stack *a, t_stack *b);
 int				get_numbers(t_stack *stack, int argc, char **argv);
-
 int				check_numbers(t_stack *stack, int argc, char **argv);
 int				check_args(int argc, char **argv);
 int				get_commands(char *line, int argc, char **argv);
 void			do_operations(t_stack *a, t_stack *b, char *str);
 int				check_duplicates(int argc, char **argv);
-int				check_sorted(int argc, char **argv);
 int				check_commands(char *opr);
-int				check_two_args(int argc, char **argv);
 void			main_sort(t_stack *a, t_stack *b);
 #endif

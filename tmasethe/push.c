@@ -6,18 +6,12 @@
 /*   By: tmasethe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 12:14:00 by tmasethe          #+#    #+#             */
-/*   Updated: 2018/09/10 17:28:41 by tmasethe         ###   ########.fr       */
+/*   Updated: 2018/09/12 11:41:08 by tmasethe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		top_stack(t_stack *stack)
-{
-	if (stack->size != 0)
-		exit(0);
-	return (stack->list[0]);
-}
 void	pa(t_stack *a, t_stack *b)
 {
 	int i;

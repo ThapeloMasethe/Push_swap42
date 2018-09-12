@@ -6,7 +6,7 @@
 /*   By: tmasethe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 11:48:42 by tmasethe          #+#    #+#             */
-/*   Updated: 2018/09/11 15:31:56 by tmasethe         ###   ########.fr       */
+/*   Updated: 2018/09/12 12:14:48 by tmasethe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static	int	duplicate(char **str)
 int			check_duplicates(int argc, char **argv)
 {
 	int		i;
-	int		j;
 	char	**str;
 
 	i = 1;
@@ -43,21 +42,12 @@ int			check_duplicates(int argc, char **argv)
 	{
 		str = ft_strsplit(argv[1], ' ');
 		if (duplicate(str))
-				return (0);
+			return (0);
 	}
 	else if (argc > 2)
 	{
-		while (i < argc - 1)
-		{
-			j = i + 1;
-			while (argv[j])
-			{
-				if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
-					return (0);
-				j++;
-			}
-			i++;
-		}
+		if (duplicate(argv))
+			return (0);
 	}
 	return (1);
 }

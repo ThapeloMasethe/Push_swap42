@@ -6,7 +6,7 @@
 /*   By: tmasethe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/23 09:17:17 by tmasethe          #+#    #+#             */
-/*   Updated: 2018/09/11 12:22:44 by tmasethe         ###   ########.fr       */
+/*   Updated: 2018/09/12 12:15:24 by tmasethe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void		free_leaks(t_stack *a, t_stack *b)
 	free(a);
 	free(b);
 }
+
 int			main(int argc, char **argv)
 {
 	t_stack stack;
@@ -52,9 +53,9 @@ int			main(int argc, char **argv)
 
 	if (argc == 1)
 		return (0);
-	//(argc > 2) ? stack.size = argc - 1 : 0;
+	(argc > 2) ? stack.size = argc - 1 : 0;
 	if (!(check_numbers(&stack, argc, argv)) || !check_args(argc, argv)
-		|| !check_duplicates(argc, argv))
+			|| !check_duplicates(argc, argv))
 	{
 		ft_putstr("Error\n");
 		exit(0);
@@ -67,12 +68,6 @@ int			main(int argc, char **argv)
 		ft_putendl("OK");
 	else if (!ft_issorted(a->list, a->size))
 		ft_putendl("KO");
-	int i = 0;
-	while (i < a->size)
-	{
-		printf("%d \n", a->list[i]);
-		i++;
-	}
-	//free_leaks(a, b);
+	free_leaks(a, b);
 	return (0);
 }

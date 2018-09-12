@@ -6,7 +6,7 @@
 /*   By: tmasethe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 09:49:55 by tmasethe          #+#    #+#             */
-/*   Updated: 2018/09/11 12:26:43 by tmasethe         ###   ########.fr       */
+/*   Updated: 2018/09/12 11:36:14 by tmasethe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static int	check_str(char *str)
 		if (!ft_isdigit(str[i]) && !ft_isspace(str[i])
 				&& str[i] != '-' && str[i] != '+')
 			return (0);
+		i++;
 	}
 	return (1);
 }
@@ -83,7 +84,6 @@ int			check_numbers(t_stack *stack, int argc, char **argv)
 			while (i++ < argc - 1)
 				if (ft_atol(argv[i]) > MAX_INT || ft_atol(argv[i]) < MIN_INT)
 					return (0);
-			stack->size = argc - 1;
 		}
 		else if (argc == 2)
 		{
